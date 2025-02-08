@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body class="whole">
+    <div class="main-container">
+       
+        <div class="sub-container" id="sub-container">
+            <img src="sample_gif.gif" alt="GIF" style="width: 200px; height: auto;" class="image">
+        <p class="text">Do you want to be my Valentine??? </p>
+        <div class="buttons">
+        <button class="accept" id="accept">Yes</button>
+        <button class="reject-button buttonss">No</button>
+        <script>
+            document.querySelector('.reject-button').addEventListener('mouseenter', function () {
+            const margin = 100; 
+
+           
+            const maxLeft = window.innerWidth - this.offsetWidth - margin;
+            const maxTop = window.innerHeight - this.offsetHeight - margin;
+        
+           
+            const randomLeft = Math.random() * maxLeft;
+            const randomTop = Math.random() * maxTop;
+        
+           
+            this.style.left = randomLeft + 'px';
+            this.style.top = randomTop + 'px';
+        });
+            
+        </script>
+        </div>
+    </div>
+
+    <div class="hide" id="newDiv">
+        <img src="accept.gif" alt="GIF" style="width: 200px; height: auto;" class="image">
+        <p class="text">I knew you gonna accept :)</p>
+</div>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+</html>
